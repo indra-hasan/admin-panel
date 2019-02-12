@@ -20,17 +20,25 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['web','auth']], function () {
-    //
     foreach (config('admin.menu') as $config => $v) {
-        if(count($v['route'])) {
-            foreach ($v['route'] as $route) {
-                Route::get('/'.$config.'/'.$route, $v['controller'].'@get'.ucfirst($route))->middleware('admin.permision');
-                if ($route == 'index') {
-                    Route::get('/'.$config, $v['controller'].'@get'.ucfirst($route))->middleware('admin.permision');
+        foreach ($v['menu'] as $menu => $m) {
+            /* looping admin route */
+            foreach ($m['admin-route'] as $route => $r) {
+                if (count($r)) {
+                    foreach ($r as $method) {
+                        Route::$route('/'.$menu.'/'.$method, $m['controller'].'@'.$route.ucfirst($method))->middleware('admin.permision');               
+                    }
                 }
-                Route::post('/'.$config.'/'.$route, $v['controller'].'@post'.ucfirst($route))->middleware('admin.permision');
             }
-        }    
+            /* looping free route */
+            foreach ($m['free-route'] as $route => $r) {
+                if (count($r)) {
+                    foreach ($r as $method) {
+                        Route::$route('/'.$menu.'/'.$method, $m['controller'].'@'.$route.ucfirst($method));               
+                    }
+                }
+            }
+        }  
     }
     
 });
