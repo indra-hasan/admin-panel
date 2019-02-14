@@ -11,12 +11,12 @@
         //admin master menu
         'admin-master' => [
             'title'  => 'Admin Master',
-            'icon'=>'dashboard',
+            'icon'=>'user-plus',
             'menu'=> [
                 'role' => [
                     'title' => 'Role Menu',
                     'controller' => 'Admin\RoleController',
-                    'icon'=>'calendar',
+                    'icon'=>'check-square-o',
                     'admin-route'=>[
                         'post'  => ['create','update','create'],
                         'get'   => ['index','create','update','delete','publis'],
@@ -29,7 +29,7 @@
                 'user' => [
                     'title' => 'User Menu',
                     'controller' => 'Admin\UserController',
-                    'icon'=>'calendar',
+                    'icon'=>'users',
                     'admin-route'=>[
                         'post'  => ['create','update','create'],
                         'get'   => ['index','create','update','delete','publis'],
@@ -40,6 +40,38 @@
                     ]
                 ],
             ]
-        ],        
+        ], 
+        'catalog' => [
+            'title'  => 'Catalog',
+            'icon'=>'database',
+            'menu'=> [
+                'brand' => [
+                    'title' => 'Brand',
+                    'controller' => 'Admin\BrandController',
+                    'icon'=>'check-circle',
+                    'admin-route'=>[
+                        'post'  => ['create','update','create'],
+                        'get'   => ['index','create','update','delete','publis'],
+                    ],
+                    'free-route'=>[
+                        'post' => [],
+                        'get' => [],
+                    ]
+                ],
+                'product' => [
+                    'title' => 'Product',
+                    'controller' => 'Admin\ProductController',
+                    'icon'=>'book',
+                    'admin-route'=>[
+                        'post'  => ['create','update','create'],
+                        'get'   => ['index','create','update','delete','publis'],
+                    ],
+                    'free-route'=>[
+                        'post' => [],
+                        'get' => ['data'],
+                    ]
+                ],
+            ]
+        ],
     ];
 ?>
