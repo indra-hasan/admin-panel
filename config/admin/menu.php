@@ -51,11 +51,11 @@
                     'icon'=>'check-circle',
                     'admin-route'=>[
                         'post'  => ['create','update','create'],
-                        'get'   => ['index','create','update','delete','publis'],
+                        'get'   => ['index','create','update','delete','publish'],
                     ],
                     'free-route'=>[
                         'post' => [],
-                        'get' => [],
+                        'get' => ['data'],
                     ]
                 ],
                 'product' => [
@@ -64,7 +64,7 @@
                     'icon'=>'book',
                     'admin-route'=>[
                         'post'  => ['create','update','create'],
-                        'get'   => ['index','create','update','delete','publis'],
+                        'get'   => ['index','create','update','delete','publish'],
                     ],
                     'free-route'=>[
                         'post' => [],
