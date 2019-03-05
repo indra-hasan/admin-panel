@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53ba941fb24e4a720d69f41bd91127f4",
+    "content-hash": "f44acc8bfdbca2434e7052c1899ed329",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -878,6 +878,39 @@
                 "schedule"
             ],
             "time": "2017-01-23T04:29:33+00:00"
+        },
+        {
+            "name": "muhamadrezaar/route-controller",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/julles/route-controller.git",
+                "reference": "104acc7cf21818b6999aa3e12fe192a560327a0d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/julles/route-controller/zipball/104acc7cf21818b6999aa3e12fe192a560327a0d",
+                "reference": "104acc7cf21818b6999aa3e12fe192a560327a0d",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Julles\\": "Src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Muhamad Reza Abdul Rohim",
+                    "email": "reza.wikrama3@gmail.com"
+                }
+            ],
+            "description": "Route Controller for Laravel 5.3++",
+            "time": "2017-10-03T03:36:34+00:00"
         },
         {
             "name": "nesbot/carbon",
